@@ -57,12 +57,12 @@ if(!isset($_SESSION['token'])){
    echo "<br />";
    echo "If not already done, please make sure that you set the above variables in the app.config file, before proceeding further! <br />";
    echo "<br />";
-   echo "<button class='myButton' title='Disconnect your app from QBO' onclick='Disconnect($value)'>Disconnect the app</button>";
+   echo "<button class='myButton' title='Disconnect your app from QBO' onclick='Disconnect($value)'>Disconnect</button>";
    echo '&nbsp;&nbsp;&nbsp;';
    echo "- Invalidates the OAuth access token in the request, thereby disconnecting the user from QuickBooks for this app.";
    echo "<br />";
    echo "<br />";
-   echo "<button class='myButton' title='Regenerate the tokens within 30 days prior to token expiration' onclick='Reconnect($value)'>Reconnect the app</button>";
+   echo "<button class='myButton' title='Regenerate the tokens within 30 days prior to token expiration' onclick='Reconnect($value)'>Reconnect</button>";
    echo '&nbsp;&nbsp;&nbsp;';
    echo "- Invalidates the OAuth access token used in the request and generates a new one, thereby extending the life span by 180 days. You can regenerate the tokens within 30 days prior to expiration!";
    echo "<br />";
