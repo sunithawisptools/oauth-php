@@ -1,7 +1,7 @@
 <?php
+  ob_start();
   require_once("./config.php");
   require_once("./CSS Styles/StyleElements.php");
-  ob_start();
 ?>
 
 <html>
