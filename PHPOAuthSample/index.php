@@ -1,6 +1,7 @@
 <?php
   require_once("./config.php");
   require_once("./CSS Styles/StyleElements.php");
+  ob_start();
 ?>
 
 <html>
@@ -71,6 +72,7 @@ if(!isset($_SESSION['token'])){
    echo '<div> <small> <u> Note:</u> Configuring the Oauth tokens manually in app.config file is only for demonstartion purpose in this sample app. In real time production app, save the oath_token, oath_token_secret, and realmId in a persistent storage, associating them with the user who is currently authorizing access. Your app needs these values for subsequent requests to Quickbooks Data Services. Be sure to encrypt the access token and access token secret before saving them in persistent storage.<br />
 		 Please refer to this <a target="_blank" href="https://developer.intuit.com/docs/0050_quickbooks_api/0020_authentication_and_authorization/connect_from_within_your_app"> link </a>for implementing oauth in your app. </small></div> <br />'; 
   }
+  ob_end_flush();
 ?>
 <script>
 function Disconnect(parameter){
