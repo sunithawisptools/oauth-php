@@ -1,4 +1,3 @@
-
 <?php
   // setting up session
   /* note: This is not a secure way to store oAuth tokens. You should use a secure
