@@ -1,4 +1,4 @@
-# OAuth-PHP
+﻿#  OAuth-PHP
 PHP Sample for OAuth
 
 Welcome to the Intuit Developer's PHP Sample OAuth App.
@@ -35,7 +35,7 @@ In order to successfully run this sample app you need a few things:
 
 1. Latest version of PHP on your machine. This sample uses PHP 5.6.3.
 2. Install Apache Server and configure PHP 5 to run with Apache Server
-3. Download Intuit’s latest PHP devkit from https://developer.intuit.com/docs/0100_accounting/0500_developer_kits/0210_ipp_php_sdk_for_quickbooks_v3– This sample uses v3-php-sdk-2.0.5. (v3-php-sdk-2.0.5 is also included in this repository for your convenience!) 
+3. Download Intuit’s latest PHP devkit from https://developer.intuit.com/docs/0100_accounting/0500_developer_kits/0209_php/php_sdk_for_quickbooks_v3– This sample uses v3-php-sdk-2.2.0-RC. (v3-php-sdk-2.2.0-RC is also included in this repository for your convenience!) 
 5. For Oauth implementation, this sample uses the Pecl Oauth library. Please download the Oauth 
 package from this [page](http://pecl.php.net/package/oauth)
 <ul>
@@ -61,7 +61,7 @@ package from this [page](http://pecl.php.net/package/oauth)
 ## First Use Instructions
 
 1. Clone the GitHub repo to your computer
-2. Place our PHPOAuthSample folder and the downloaded v3-php-sdk-2.0.5 folder inside the web folder of the Apache web server.
+2. Place our PHPOAuthSample folder and the downloaded v3-php-sdk-2.2.0-RC folder inside the web folder of the Apache web server.
 3. This sample is using the sandbox environment by default. So, you need to use the development tokens of your app for running this sample. If you want to switch to production, please make sure that you change the baseUrl in app.config file inside PHPOAuthSample folder to quickbooks.api.intuit.com from sandbox-quickbooks.api.intuit.com. Also, make sure that you configure the sample app to use prod tokens instead of development tokens.
 4. **Configuring the app tokens**: Go to your app on developer.intuit.com and copy the OAuth Consumer Key and OAuth Consumer Token from the keys tab. Add these values to the **config.php** file in our PHPOAuthSample folder.
 5. Set the **session_save_path** variable in config.php file to the path of a directory on your local machine where you want to save the session data (preferably temp folder)

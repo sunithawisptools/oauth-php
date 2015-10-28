@@ -28,7 +28,7 @@
 <body>
 
 <?php
-require_once('../v3-php-sdk-2.0.5/config.php');  // Default V3 PHP SDK (v2.0.1) from IPP
+require_once('../v3-php-sdk-2.2.0-RC/config.php');  // Default V3 PHP SDK (v2.0.1) from IPP
 require_once(PATH_SDK_ROOT . 'Core/ServiceContext.php');
 require_once(PATH_SDK_ROOT . 'DataService/DataService.php');
 require_once(PATH_SDK_ROOT . 'PlatformService/PlatformService.php');
