@@ -35,7 +35,7 @@ In order to successfully run this sample app you need a few things:
 
 1. Latest version of PHP on your machine. This sample uses PHP 5.6.3.
 2. Install Apache Server and configure PHP 5 to run with Apache Server
-3. Download Intuit’s latest PHP devkit from GitHub. This sample uses v3-php-sdk-2.2.0-RC. (v3-php-sdk-2.2.0-RC is also included in this repository for your convenience!) 
+3. Download Intuit’s latest PHP devkit from GitHub https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting/0209_php. This sample uses v3-php-sdk-2.2.0-RC. (v3-php-sdk-2.2.0-RC is also included in this repository for your convenience!) 
 5. For Oauth implementation, this sample uses the Pecl Oauth library. Please download the Oauth 
 package from this [page](http://pecl.php.net/package/oauth)
 <ul>
