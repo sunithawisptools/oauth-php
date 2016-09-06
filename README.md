@@ -78,7 +78,7 @@ Once the sample app code is on your computer, you can do the following steps to 
 **Note**: Configuring the Oauth tokens manually in app.config file is only for demonstartion purpose in this sample app. In real time production app, save the oath_token, oath_token_secret, and realmId and creation date in a persistent storage, associating them with the user who is currently authorizing access. Your app needs these values for subsequent requests to Quickbooks Data Services. Be sure to encrypt the access token and access token secret before saving them in persistent storage.
 </li>
 <li>
-Please refer to this [link](https://developer.intuit.com/docs/0050_quickbooks_api/0020_authentication_and_authorization/connect_from_within_your_app) for implementing oauth in your app.
+Please refer to this [link](https://developer.intuit.com/docs/0100_quickbooks_online/0100_essentials/0085_develop_quickbooks_apps/0004_authentication_and_authorization/connect_from_within_your_app) for implementing oauth in your app.
 </li>
 </ul>
 
@@ -112,7 +112,7 @@ Buttons and their functionalities:
 ### How To Guides
 
 The following How-To guides related to implementation tasks necessary to produce a production-ready Intuit Partner Platform app:
-* <a href="https://developer.intuit.com/docs/0100_accounting/0060_authentication_and_authorization/connect_from_within_your_app" target="_blank">OAuth How To Guide </a>
+* <a href="https://developer.intuit.com/docs/0100_quickbooks_online/0100_essentials/0085_develop_quickbooks_apps/0004_authentication_and_authorization/connect_from_within_your_app" target="_blank">OAuth How To Guide </a>
 
 
 
