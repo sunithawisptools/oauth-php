@@ -6,13 +6,9 @@
 </head>
 <body>
 <?php
-
 //error_reporting( E_ALL & ~( E_STRICT | E_DEPRECATED | E_WARNING ) );
-
-require_once('../v3-php-sdk-2.2.0-RC/config.php');
-
-//require_once(PATH_SDK_ROOT . 'Utility/Serialization/XmlObjectSerializer.php');
-//require_once(PATH_SDK_ROOT . 'XSD2PHP/src/com/mikebevz/xsd2php/Php2Xml.php');
+$sum=$_POST['amt'];
+require_once('../config.php');
 require_once(PATH_SDK_ROOT . 'Core/ServiceContext.php');
 require_once(PATH_SDK_ROOT . 'DataService/DataService.php');
 require_once(PATH_SDK_ROOT . 'PlatformService/PlatformService.php');
@@ -38,27 +34,27 @@ if (!$dataService)
 exit("Problem while initializing DataService.\n");
 $linedet = new IPPJournalEntryLineDetail();
 $linedet->PostingType = 'Debit';
-$linedet->AccountRef  = 9;
+$linedet->AccountRef=8;
 $line = new IPPLine();
 $line->Id = 0;
 $line->Description = 'test journal';
-$line->Amount = 2.00;
-$line->DetailType= 'JournalEntryLineDetail';
+$line->Amount =$sum;
+$line->DetailType= 'JournalEntryLineDetail ';
 $line->JournalEntryLineDetail = $linedet;
 $linedet2 = new IPPJournalEntryLineDetail();
 $linedet2->PostingType = 'Credit';
-$linedet2->AccountRef  = 8;
+$linedet2->AccountRef  = 1;
 $line2 = new IPPLine();
 $line2->Id = 1;
 $line2->Description = 'test journal';
-$line2->Amount = 2.00;
-$line2->DetailType= 'JournalEntryLineDetail';
+$line2->Amount =$sum;
+$line2->DetailType= 'JournalEntryLineDetail ';
 $line2->JournalEntryLineDetail = $linedet2;
 // Add a journal
 $journalObj = new IPPJournalEntry();
 $journalObj->SyncToken = '1';
 $journalObj->DocNumber = '1';
-$journalObj->TxnDate = '2014-12-30';
+$journalObj->TxnDate = '2017-4-4';
 $journalObj->RefNumber = 't123';
 $journalObj->PrivateNote = 'Just testing';
 $journalObj->Line = array($line, $line2);
