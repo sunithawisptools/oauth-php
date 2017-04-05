@@ -8,6 +8,7 @@
 <?php
 //error_reporting( E_ALL & ~( E_STRICT | E_DEPRECATED | E_WARNING ) );
 $sum=$_POST['amt'];
+$date=$_POST['date'];
 require_once('../config.php');
 require_once(PATH_SDK_ROOT . 'Core/ServiceContext.php');
 require_once(PATH_SDK_ROOT . 'DataService/DataService.php');
@@ -54,7 +55,7 @@ $line2->JournalEntryLineDetail = $linedet2;
 $journalObj = new IPPJournalEntry();
 $journalObj->SyncToken = '1';
 $journalObj->DocNumber = '1';
-$journalObj->TxnDate = '2017-4-4';
+$journalObj->TxnDate = $date;
 $journalObj->RefNumber = 't123';
 $journalObj->PrivateNote = 'Just testing';
 $journalObj->Line = array($line, $line2);
