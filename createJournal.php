@@ -7,9 +7,13 @@
 <body>
 <?php
 //error_reporting( E_ALL & ~( E_STRICT | E_DEPRECATED | E_WARNING ) );
+
+$myfile = fopen("PHPOAuthSample/newfile.txt", "r") or die("Unable to open file!");
+$gcontent = fread($myfile, filesize("PHPOAuthSample/newfile.txt"));
+$expc = json_decode($gcontent);
 $sum=$_POST['amt'];
 $date=$_POST['date'];
-require_once('../config.php');
+require_once('v3-php-sdk-2.2.0-RC/config.php');
 require_once(PATH_SDK_ROOT . 'Core/ServiceContext.php');
 require_once(PATH_SDK_ROOT . 'DataService/DataService.php');
 require_once(PATH_SDK_ROOT . 'PlatformService/PlatformService.php');
@@ -18,14 +22,16 @@ require_once(PATH_SDK_ROOT . 'Core/OperationControlList.php');
 //Specify QBO or QBD
 $serviceType = IntuitServicesType::QBO;
 // Get App Config
-$realmId = ConfigurationManager::AppSettings('RealmID');
+$realmId = $expc['realmId'];
 if (!$realmId)
 exit("Please add realm to App.Config before running this sample.\n");
 // Prep Service Context
-$requestValidator = new OAuthRequestValidator(ConfigurationManager::AppSettings('AccessToken'),
-                                              ConfigurationManager::AppSettings('AccessTokenSecret'),
+
+ $requestValidator = new OAuthRequestValidator($expc['oauth_token'],
+                                              $expc['oauth_token_secret'],
                                               ConfigurationManager::AppSettings('ConsumerKey'),
                                               ConfigurationManager::AppSettings('ConsumerSecret'));
+
 $serviceContext = new ServiceContext($realmId, $serviceType, $requestValidator);
 if (!$serviceContext)
 exit("Problem while initializing ServiceContext.\n");

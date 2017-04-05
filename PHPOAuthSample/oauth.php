@@ -8,7 +8,7 @@ define('OAUTH_AUTHORISE_URL', 'https://appcenter.intuit.com/Connect/Begin');
 
 // The url to this page. it needs to be dynamic to handle runnable's dynamic urls
 
-define('CALLBACK_URL','http://'.$_SERVER['HTTP_HOST'].'/PHPOAuthSample/oauth.php');
+define('CALLBACK_URL',BASE_URL.'/PHPOAuthSample/oauth.php');
 // cleans out the token variable if comming from
 // connect to QuickBooks button
 if ( isset($_GET['start'] ) ) {

@@ -20,7 +20,7 @@ if (!defined('POPO_CLASS_PATH'))
 
 // Include XSD2PHP dependencies for marshalling and unmarshalling
 use com\mikebevz\xsd2php;
-require_once(PATH_SDK_ROOT . 'XSD2PHP/src/com/mikebevz/xsd2php/Php2Xml.php');
+require_once(PATH_SDK_ROOT. 'XSD2PHP/src/com/mikebevz/xsd2php/Php2Xml.php');
 require_once(PATH_SDK_ROOT . 'XSD2PHP/src/com/mikebevz/xsd2php/Bind.php');
 
 // Includes all POPO classes; these are the source, dest, or both of the marshalling

@@ -18,7 +18,7 @@
     // end runnable specific code snipit ##########################//
     intuit.ipp.anywhere.setup({
         menuProxy: '',
-        grantUrl: 'http://'+parser.hostname+'/PHPOAuthSample/oauth.php?start=t' 
+        grantUrl: '<?php echo BASE_URL; ?>/PHPOAuthSample/oauth.php?start=t' 
         // outside runnable you can point directly to the oauth.php page
     });
   </script>
@@ -55,6 +55,12 @@ if(!isset($_SESSION['token'])){
    echo "realm ID: ". $_SESSION['realmId'] . "<br />";
    echo "oauth token: ". $token['oauth_token'] . "<br />";
    echo "oauth secret: ". $token['oauth_token_secret'] . "<br />";
+ 
+   $key_array=array('realmId'=>$_SESSION['realmId'],'oauth_token'=>$token['oauth_token'],'oauth_token_secret'=>$token['oauth_token_secret']);
+  $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+   fwrite($myfile, json_encode($key_array));
+  
+   fclose($myfile);
    echo "<br />";
    echo "If not already done, please make sure that you set the above variables in the app.config file, before proceeding further! <br />";
    echo "<br />";
@@ -76,11 +82,11 @@ if(!isset($_SESSION['token'])){
 ?>
 <script>
 function Disconnect(parameter){
-window.location.href = "http://localhost/PHPOAuthSample/Disconnect.php";
+window.location.href = "<?php echo BASE_URL; ?>/PHPOAuthSample/Disconnect.php";
 }
 
 function Reconnect(parameter){
-window.location.href = "http://localhost/PHPOAuthSample/Reconnect.php";
+window.location.href ="<?php echo BASE_URL; ?>/PHPOAuthSample/Reconnect.php";
 }
 </script>
 </body>
