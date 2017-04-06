@@ -6,9 +6,9 @@
   session_save_path('/tmp');
   session_start();
 
-  define('OAUTH_CONSUMER_KEY', 'qyprduMSTUFfnioydGKKJeYPtUxR5Z');
-  define('OAUTH_CONSUMER_SECRET', 'uY7J1HDZBThi6OzGDQzzM3hOkN46td7NGptIlaaZ');
-  define('BASE_URL', 'http://192.168.0.104/test/sunitha/oauth-php-master');
+  define('OAUTH_CONSUMER_KEY', '');
+  define('OAUTH_CONSUMER_SECRET', '');
+  define('BASE_URL', '');
   
   if(strlen(OAUTH_CONSUMER_KEY) < 5 OR strlen(OAUTH_CONSUMER_SECRET) < 5 ){
     echo "<h3>Set the consumer key and secret in the config.php file before you run this example</h3>";
